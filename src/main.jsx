@@ -79,6 +79,40 @@ const gallery = [
   "https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=900&q=85",
 ];
 
+const purchaseHighlights = [
+  "Personalized brass nameplate",
+  "Premium pebbled leather",
+  "Measured everyday fit",
+];
+
+const sizes = [
+  { label: "S", range: "10-14 in", note: "Cats and small dogs" },
+  { label: "M", range: "14-18 in", note: "Most everyday companions" },
+  { label: "L", range: "18-23 in", note: "Larger breeds" },
+];
+
+const colors = [
+  { name: "Cocoa", className: "bg-[#4a2f23]" },
+  { name: "Black", className: "bg-[#171717]" },
+  { name: "Chestnut", className: "bg-[#8a5435]" },
+  { name: "Sage", className: "bg-[#7b846f]" },
+];
+
+const lifestyleMoments = [
+  {
+    title: "Morning walks",
+    text: "A secure fit that stays quiet when the day begins.",
+  },
+  {
+    title: "Travel days",
+    text: "Readable details kept close without a dangling tag.",
+  },
+  {
+    title: "Everyday rest",
+    text: "Soft leather that feels natural at home, too.",
+  },
+];
+
 function App() {
   return (
     <main className="min-h-screen bg-[#f7f7f5] text-neutral-950">
@@ -88,8 +122,14 @@ function App() {
             PAWCRAFT STUDIO
           </a>
           <div className="hidden items-center gap-8 text-sm text-neutral-600 md:flex">
+            <a className="transition hover:text-neutral-950" href="#shop">
+              Shop
+            </a>
             <a className="transition hover:text-neutral-950" href="#features">
               Materials
+            </a>
+            <a className="transition hover:text-neutral-950" href="#fit">
+              Fit
             </a>
             <a className="transition hover:text-neutral-950" href="#engraving">
               Engraving
@@ -124,19 +164,19 @@ function App() {
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-950 px-6 py-3 text-base font-medium text-white transition hover:bg-neutral-800"
-                href="#engraving"
+                href="#shop"
               >
                 Personalize Yours <ArrowRight size={18} aria-hidden="true" />
               </a>
               <a
                 className="inline-flex items-center justify-center rounded-full border border-neutral-300 bg-white/60 px-6 py-3 text-base font-medium text-neutral-950 backdrop-blur transition hover:bg-white"
-                href="#gallery"
+                href="#real-fits"
               >
                 See Real Fits
               </a>
             </div>
             <p className="mt-5 text-sm font-medium text-neutral-600 sm:text-base">
-              Engraved nameplate · Premium leather · Made to fit
+              Engraved nameplate &middot; Premium leather &middot; Made to fit
             </p>
           </div>
         </div>
@@ -147,6 +187,52 @@ function App() {
         >
           <ChevronDown size={28} />
         </a>
+      </section>
+
+      <section id="shop" className="bg-white py-20 lg:py-28">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="overflow-hidden rounded-lg bg-[#f0eee7]">
+            <img
+              className="aspect-[5/4] w-full object-cover object-center"
+              src={collarImage}
+              alt="Pawcraft Studio personalized leather collar on a dog"
+            />
+          </div>
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#8d4f49]">
+              Personalized collar
+            </p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+              Made for the dog you always look back for.
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-neutral-600">
+              A quiet leather collar with the details that matter: their name, your number, and a
+              fit that feels secure through everyday life.
+            </p>
+            <div className="mt-8 divide-y divide-neutral-200 border-y border-neutral-200">
+              {purchaseHighlights.map((item) => (
+                <div className="flex items-center gap-3 py-4 text-neutral-800" key={item}>
+                  <Check className="text-[#557060]" size={18} aria-hidden="true" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-950 px-6 py-3 text-base font-medium text-white transition hover:bg-neutral-800"
+                href="#fit"
+              >
+                Choose Fit <ArrowRight size={18} aria-hidden="true" />
+              </a>
+              <a
+                className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-6 py-3 text-base font-medium text-neutral-950 transition hover:bg-neutral-50"
+                href="#engraving"
+              >
+                Preview Engraving
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="features" className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
@@ -177,6 +263,69 @@ function App() {
               <p className="mt-3 leading-7 text-neutral-600">{feature.text}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section id="fit" className="bg-[#f0eee7] py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#557060]">
+                Fit and color
+              </p>
+              <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+                Choose the size they can live in.
+              </h2>
+            </div>
+            <p className="max-w-2xl text-lg leading-8 text-neutral-600 lg:justify-self-end">
+              Start with where the collar naturally rests. Then choose a leather tone that feels at
+              home with their daily rhythm.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-10 lg:grid-cols-2">
+            <div>
+              <h3 className="text-xl font-semibold">Size guide</h3>
+              <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                {sizes.map((size) => (
+                  <article
+                    className="rounded-lg border border-neutral-200 bg-white p-5 shadow-[0_12px_36px_rgba(20,20,20,0.025)]"
+                    key={size.label}
+                  >
+                    <div className="flex items-baseline justify-between gap-4">
+                      <span className="text-2xl font-semibold">{size.label}</span>
+                      <span className="text-sm text-neutral-500">{size.range}</span>
+                    </div>
+                    <p className="mt-5 leading-7 text-neutral-600">{size.note}</p>
+                  </article>
+                ))}
+              </div>
+              <p className="mt-5 text-sm leading-6 text-neutral-500">
+                Leave room for two fingers. The collar should feel secure, never tight.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">Leather colors</h3>
+              <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                {colors.map((color) => (
+                  <article
+                    className="rounded-lg border border-neutral-200 bg-white p-4 shadow-[0_12px_36px_rgba(20,20,20,0.025)]"
+                    key={color.name}
+                  >
+                    <span
+                      className={`block aspect-square rounded-md ${color.className}`}
+                      aria-hidden="true"
+                    />
+                    <p className="mt-4 font-medium text-neutral-800">{color.name}</p>
+                  </article>
+                ))}
+              </div>
+              <p className="mt-5 text-sm leading-6 text-neutral-500">
+                Warm brass hardware is paired with every color for a calm, unified finish.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -224,6 +373,39 @@ function App() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="real-fits" className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#557060]">
+              Real fits
+            </p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+              Worn in the quiet parts of the day.
+            </h2>
+          </div>
+          <p className="max-w-2xl text-lg leading-8 text-neutral-600 lg:justify-self-end">
+            A collar should look considered in a photograph, then disappear into daily life because
+            it simply works.
+          </p>
+        </div>
+
+        <div className="mt-14 grid gap-4 lg:grid-cols-3">
+          {lifestyleMoments.map((moment, index) => (
+            <article className="overflow-hidden rounded-lg bg-white" key={moment.title}>
+              <img
+                className="aspect-[4/5] w-full object-cover"
+                src={gallery[index]}
+                alt={`${moment.title} with a Pawcraft Studio collar`}
+              />
+              <div className="border-x border-b border-neutral-200 p-6">
+                <h3 className="text-xl font-semibold">{moment.title}</h3>
+                <p className="mt-3 leading-7 text-neutral-600">{moment.text}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
