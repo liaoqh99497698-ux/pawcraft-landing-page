@@ -11,42 +11,41 @@ import {
 } from "lucide-react";
 import "./styles.css";
 
-const collarImage =
-  "https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?auto=format&fit=crop&w=1800&q=85";
+const collarImage = "/images/hero-generated-dog-collar.png";
 const studioImage =
   "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=1800&q=85";
 
 const features = [
   {
-    title: "Crafted to Fit",
-    text: "Soft, structured collars made in measured sizes so everyday walks feel effortless.",
+    title: "Made to Stay With Them",
+    text: "A measured fit that feels secure on quiet walks, busy mornings, and every day in between.",
   },
   {
-    title: "Personal Engraving",
-    text: "Add a name, phone number, or small phrase with crisp, lasting hardware engraving.",
+    title: "Engraved for Peace of Mind",
+    text: "A calm nameplate keeps the details that matter close, without the noise of a swinging tag.",
   },
   {
-    title: "Quietly Durable",
-    text: "Weather-ready webbing, rounded edges, and reinforced stitching for years of daily use.",
+    title: "Leather That Softens With Time",
+    text: "Premium grain, refined stitching, and a feel made for long companionship.",
   },
 ];
 
 const testimonials = [
   {
     quote:
-      "The collar feels beautiful in hand, and the engraving is clear without looking loud. It suits Milo perfectly.",
+      "After evening walks, I stopped worrying about noisy tags or loose clips. The nameplate feels quiet, secure, and made for her.",
     name: "Emily R.",
     pet: "Milo, Cocker Spaniel",
   },
   {
     quote:
-      "I wanted something safer than a hanging tag. Pawcraft made it refined, practical, and genuinely personal.",
+      "It does not feel like something we bought for a photo. It feels like something Milo can wear every day.",
     name: "Marcus L.",
     pet: "Juniper, Tabby Cat",
   },
   {
     quote:
-      "It has that calm premium feeling I hoped for. The fit guide was simple, and the result arrived exactly right.",
+      "The leather softened naturally after the first week, and the engraved plate still looks calm and clear.",
     name: "Ava C.",
     pet: "Nori, Shiba Inu",
   },
@@ -55,19 +54,19 @@ const testimonials = [
 const faq = [
   {
     q: "How do I choose the right size?",
-    a: "Measure around your pet's neck and leave two fingers of room. Each collar includes a generous adjustment range.",
+    a: "Measure where the collar naturally rests, then leave room for two fingers. A quiet fit should feel secure, never tight.",
   },
   {
     q: "What can I engrave?",
-    a: "Most customers add a pet name and phone number. Short notes such as “I am loved” also fit beautifully.",
+    a: "Most families choose a name and phone number. Keep it simple, clear, and easy to read at a glance.",
   },
   {
     q: "Are the collars comfortable for daily wear?",
-    a: "Yes. The profile is low, the edges are smooth, and the materials are chosen for skin-friendly everyday comfort.",
+    a: "Yes. The collar is shaped for everyday movement, with smooth edges and materials chosen to feel gentle over time.",
   },
   {
     q: "How long does customization take?",
-    a: "Most custom collars are prepared within 3 to 5 business days before shipping.",
+    a: "Most personalized collars are prepared within 3 to 5 business days before shipping.",
   },
 ];
 
@@ -85,7 +84,7 @@ function App() {
     <main className="min-h-screen bg-[#f7f7f5] text-neutral-950">
       <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/25 bg-white/70 backdrop-blur-2xl">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
-          <a className="text-sm font-semibold tracking-[0.18em] text-neutral-950" href="#top">
+          <a className="text-lg font-bold tracking-[0.1em] text-neutral-950 sm:text-xl" href="#top">
             PAWCRAFT STUDIO
           </a>
           <div className="hidden items-center gap-8 text-sm text-neutral-600 md:flex">
@@ -102,12 +101,6 @@ function App() {
               FAQ
             </a>
           </div>
-          <a
-            className="inline-flex items-center gap-2 rounded-full bg-neutral-950 px-4 py-2 text-sm font-medium text-white transition hover:bg-neutral-800"
-            href="#engraving"
-          >
-            Start <ArrowRight size={16} aria-hidden="true" />
-          </a>
         </div>
       </nav>
 
@@ -122,30 +115,29 @@ function App() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_45%,rgba(255,255,255,0)_0%,rgba(0,0,0,0.08)_78%,rgba(0,0,0,0.16)_100%)]" />
         <div className="relative mx-auto flex min-h-[calc(92svh-4rem)] max-w-7xl items-center px-5 py-16 sm:px-8">
           <div className="max-w-3xl">
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.22em] text-[#8d4f49]">
-              Custom engraved pet collars
+            <p className="mb-5 max-w-2xl text-sm font-semibold tracking-[0.04em] text-[#8d4f49] sm:text-base">
+              Personalized collars crafted for safety & style
             </p>
-            <h1 className="text-balance text-5xl font-semibold leading-[0.98] text-neutral-950 sm:text-7xl lg:text-8xl">
-              Pawcraft Studio
+            <h1 className="text-balance text-5xl font-semibold leading-[1.02] text-neutral-950 sm:text-6xl lg:text-7xl">
+              Never Lose Touch.
             </h1>
-            <p className="mt-7 max-w-2xl text-pretty text-lg leading-8 text-neutral-700 sm:text-xl">
-              Minimal collars tailored for pets with presence: precise sizing, soft-touch durability,
-              and personal engraving that feels calm, elegant, and secure.
-            </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-950 px-6 py-3 text-base font-medium text-white transition hover:bg-neutral-800"
                 href="#engraving"
               >
-                Customize Yours <ArrowRight size={18} aria-hidden="true" />
+                Personalize Yours <ArrowRight size={18} aria-hidden="true" />
               </a>
               <a
                 className="inline-flex items-center justify-center rounded-full border border-neutral-300 bg-white/60 px-6 py-3 text-base font-medium text-neutral-950 backdrop-blur transition hover:bg-white"
                 href="#gallery"
               >
-                View Gallery
+                See Real Fits
               </a>
             </div>
+            <p className="mt-5 text-sm font-medium text-neutral-600 sm:text-base">
+              Engraved nameplate · Premium leather · Made to fit
+            </p>
           </div>
         </div>
         <a
@@ -160,7 +152,7 @@ function App() {
       <section id="features" className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#557060]">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#557060]">
               Product Values
             </p>
             <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -175,10 +167,10 @@ function App() {
         <div className="mt-14 grid gap-4 md:grid-cols-3">
           {features.map((feature) => (
             <article
-              className="rounded-lg border border-neutral-200 bg-white p-7 shadow-[0_18px_50px_rgba(20,20,20,0.04)]"
+              className="rounded-lg border border-neutral-200 bg-white p-7 shadow-[0_12px_36px_rgba(20,20,20,0.025)]"
               key={feature.title}
             >
-              <div className="mb-8 flex h-10 w-10 items-center justify-center rounded-full bg-[#e8eee8] text-[#557060]">
+              <div className="mb-8 flex h-10 w-10 items-center justify-center rounded-full bg-neutral-100 text-neutral-700">
                 <Check size={20} aria-hidden="true" />
               </div>
               <h3 className="text-xl font-semibold">{feature.title}</h3>
@@ -197,7 +189,7 @@ function App() {
               alt="A dog sitting in a warm studio setting"
             />
             <div className="absolute inset-x-6 bottom-6 rounded-lg border border-white/40 bg-white/82 p-5 shadow-2xl backdrop-blur-xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-500">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-neutral-500">
                 Engraving Preview
               </p>
               <div className="mt-3 flex items-center justify-between gap-4 rounded-full bg-neutral-950 px-5 py-4 text-white">
@@ -207,7 +199,7 @@ function App() {
             </div>
           </div>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#8d4f49]">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#8d4f49]">
               Personal, not precious
             </p>
             <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-6xl">
@@ -238,18 +230,18 @@ function App() {
       <section id="reviews" className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#557060]">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#557060]">
               Trusted by pet families
             </p>
             <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
               Small details, deeply noticed.
             </h2>
           </div>
-          <p className="text-lg text-neutral-600">4.9 average from 1,200+ custom orders</p>
+          <p className="text-lg text-neutral-600">Stories from everyday walks.</p>
         </div>
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           {testimonials.map((item) => (
-            <figure className="rounded-lg bg-white p-7 shadow-[0_18px_50px_rgba(20,20,20,0.04)]" key={item.name}>
+            <figure className="rounded-lg bg-white p-7 shadow-[0_12px_36px_rgba(20,20,20,0.025)]" key={item.name}>
               <blockquote className="text-lg leading-8 text-neutral-800">"{item.quote}"</blockquote>
               <figcaption className="mt-8 border-t border-neutral-200 pt-5">
                 <span className="block font-semibold">{item.name}</span>
@@ -264,7 +256,7 @@ function App() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
-              <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.22em] text-[#d8aaa6]">
+              <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-[#d8aaa6]">
                 <Camera size={17} aria-hidden="true" /> Studio Feed
               </p>
               <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -289,13 +281,13 @@ function App() {
       </section>
 
       <section id="faq" className="mx-auto max-w-4xl px-5 py-20 sm:px-8 lg:py-28">
-        <p className="text-center text-sm font-semibold uppercase tracking-[0.22em] text-[#8d4f49]">
+        <p className="text-center text-sm font-semibold uppercase tracking-[0.14em] text-[#8d4f49]">
           FAQ
         </p>
         <h2 className="mt-4 text-center text-4xl font-semibold tracking-tight sm:text-5xl">
           Before you customize.
         </h2>
-        <div className="mt-12 divide-y divide-neutral-200 rounded-lg bg-white px-6 shadow-[0_18px_50px_rgba(20,20,20,0.04)]">
+        <div className="mt-12 divide-y divide-neutral-200 rounded-lg bg-white px-6 shadow-[0_12px_36px_rgba(20,20,20,0.025)]">
           {faq.map((item) => (
             <details className="group py-6" key={item.q}>
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold">
